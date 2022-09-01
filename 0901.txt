@@ -1,0 +1,19 @@
+bbs
+id int(10) not null auto_increment,
+:게시판 글 번호를 자동으로 증가시킴
+title
+writer
+email
+content text,
+regDate datetime default current_timestamp,
+:현재 시간을 자동으로 추가
+primary key(id));
+-----------------------------------------------------------------
+<<php에서 mysql을 사용하기 위한 함수
+1. 접속: mysqli_connect(url, 아이디, 패스워드, 사용할 디비);
+2. 쿼리: mysqli_query()
+3. 종료: mysqli_close()
+
+<<클라이언트가 서버에게 정보를 요청하는 방식
+1. get: <a href...> 정보 노출
+2. post: 안 보임 <form>

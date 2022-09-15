@@ -17,3 +17,8 @@ primary key(id));
 <<클라이언트가 서버에게 정보를 요청하는 방식
 1. get: <a href...> 정보 노출
 2. post: 안 보임 <form>
+
+
+mysqli_query()
+한 줄 가져오기 mysqli_fetch_row()
+	        mysqli_fetch_array()

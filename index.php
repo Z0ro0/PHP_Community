@@ -1,21 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+<table class="table table-hover">
+    <tr><td>번호</td><td>제목</td><td>작성자</td><td>이메일</td><td>내용</td><td>작성날짜</td>
 <?php
-    //1. mysql 접속
-    include('./db_conn.php');
-    //2. $query = bbs의 모든 데이터 가져오기
-    $query = "select * from bbs";
-    // 쿼리날리기
-    $result = mysqli_query($conn,$query);
+//목록 가져오기
+// 1. 디비 접속
+include('./db_conn.php');
+// 2. 모든 데이터 가져오는 쿼리 날리기
+$query = "select * from bbs";
+$result = mysqli_query($conn,$query);
 
+$count = mysqli_num_rows($result);
+
+for($i = 0; $i < $count; $i++){
     $re = mysqli_fetch_row($result);
+    echo "<tr><td>$re[0]</td><td>$re[1]</td><td>$re[2]</td><td>$re[4]</td><td>$re[5]</td><td>$re[6]</td></tr>";
+}
 
-    echo $re[0]."<br/>";
-    echo $re[1]."<br/>";
-    echo $re[2]."<br/>";
-    echo $re[3]."<br/>";
-    echo $re[4]."<br/>";
-    echo $re[5]."<br/>";
-    //3. 종료
-    mysqli_close($conn);
-
-
+// 3. 디비 접속 종료
+mysqli_close($conn);
 ?>

@@ -10,6 +10,14 @@
 
     <title>Hello, world!</title>
   </head>
+<table class="table table-hover">
+    <tr><td>번호</td><td>제목</td><td>작성자</td><td>이메일</td><td>내용</td><td>작성날짜</td>
+    <style>
+        body{margin:20px;}
+        a:link{text-decoration:none;color:#333}
+        a:visited{text-decoration:none;color:#333}
+        a:hover{text-decoration:underline;color:red;}
+    </style>
 <?php
 //목록 가져오기
 // 1. 디비 접속
@@ -22,18 +30,14 @@ $count = mysqli_num_rows($result);
 
 for($i = 0; $i < $count; $i++){
     $re = mysqli_fetch_row($result);
-    echo "<table border='5'>
-          <table>
-            <tr>
-            <tr><td>$re[0]</td><td>$re[2]</td></tr>
-            <tr><td>$re[1]</td><td>$re[6]</td></tr>
-            <tr><td>$re[5]</td></tr>
-          </table>";
-      }
+    echo "<tr><td>$re[0]</td><td>$re[1]</td><td>$re[2]</td><td>$re[4]</td><td>$re[5]</td><td>$re[6]</td>
+          <td><a href="xxx">수정</a></td><td><a href="xxx">삭제</a></td></tr>";
+}
 
 // 3. 디비 접속 종료
 mysqli_close($conn);
 ?>
+</table>
 <div style="margin-left:500px">
 <a href="write.html" class="btn btn-success">Write</a>
 </div>

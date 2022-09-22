@@ -6,3 +6,5 @@ delete from bbs where idx=1; bbs에서 인덱스 1데이터만 삭제
 2. post: 링크를 봤을 때 뒤에 주저리주저리 나와있지 않음<form>
 
 **수정 삭제는 거의 링크를 거는 get 방식으로 사용함
+
+title: $re[0]

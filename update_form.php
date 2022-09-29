@@ -44,7 +44,7 @@ echo "$re[0] $re[1] $re[2] $re[3] $re[4] $re[5] $re[6]";
         <label for="exampleFormControlInput1" class="form-label"></label>
         email<input type="email" class="form-control" id="exampleFormControlInput1" name= "email" placeholder="email" value="<?php echo $re[4] ?>">
       </div>
-     
+     <input type="hidden" name="a" value="<?php echo $re[0] ?>">
       <button type="submit" class="btn btn-warning">수정완료</button>
     </form>
       </body>

@@ -1,18 +1,26 @@
 <?php
 include('./db_conn.php');
 
-$u_title = $_POST['title'];
-$u_writer = $_POST['writer'];
-$u_password= $_POST['password'];
-$u_content= $_POST['content'];
-$u_email= $_POST['email'];
+$_idx = $_POST['a'];
+$_title = $_POST['title'];
+$_writer = $_POST['writer'];
+$_password= $_POST['password'];
+$_content= $_POST['content'];
+$_email= $_POST['email'];
+$_password = $_POST['passwprd'];
 
-echo $u_title;
-echo $u_writer;
-echo $u_password;
-echo $u_content ;
-echo $u_email;
+echo $_title;
+echo $_writer;
+echo $_password;
+echo $_content ;
+echo $_email;
+echo "a".$_idx;
 
-$query = "updqte bbs set title"
+$query = "update bbs set 
+            title='$_title', writer='$_writer', content='$_content', email='$_email'
+            where id=$_idx";
+
+mysqli_query($conn, $query);
+echo "수정되었습니다";
 
 ?>

@@ -23,7 +23,7 @@ echo "사용자가 입력한 비번 ".$_password;
 
 
 
-if(){
+if($re[3] == $_password){
     $query = "update bbs set 
             title='$_title', writer='$_writer', content='$_content', email='$_email'
             where id=$_idx";

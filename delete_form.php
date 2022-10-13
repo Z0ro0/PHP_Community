@@ -22,6 +22,7 @@
         <label for="exampleFormControlInput1" class="form-label"></label>
         비밀번호 입력하세요<input type="password" class="form-control" id="exampleFormControlInput1" name= "password" placeholder="">
       </div>
+      
       <input type="hidden" name="b" value="<?php echo $_b ?> ">
       <button type="submit" class="btn btn-warning">삭제완료</button>
     </form>

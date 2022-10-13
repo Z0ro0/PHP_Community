@@ -16,7 +16,7 @@ $result = mysqli_query($conn, $query); //$result: 2차원 배열
 $re = mysqli_fetch_row($result); //한 줄씩 가지고 오기
 
 // 진짜 비밀번호 출력하기
-if($_pass == $re[3]){
+if($_pass===($re[3])){//타입까지 맞아야 함
     $query = "delete from bbs where id=$_idx";
     mysqli_query($conn, $query);
     echo "삭제되었습니다";      

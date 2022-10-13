@@ -1,0 +1,2 @@
+mysql -utest -p1111 testdb
+select *from bbs;

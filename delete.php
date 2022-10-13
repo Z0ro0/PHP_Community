@@ -24,3 +24,4 @@ if($_pass===($re[3])){//타입까지 맞아야 함
     echo "<script>alert('비밀번호 오류');history.go(-1);s</script>";
 }
 ?>
+<meta http-equiv="refresh" content="0; url=http://localhost/bbs/">
